@@ -386,14 +386,11 @@ h1 {
 
   .game-shell {
     width: 100%;
-    height: calc(100dvh - 12px);
+    min-height: calc(100dvh - 12px);
     border-radius: 18px;
     padding: 8px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto minmax(0, 1fr);
+    display: block;
     gap: 6px;
-    align-items: stretch;
   }
 
   .heading {
@@ -475,17 +472,13 @@ h1 {
     padding: 3px;
     gap: 3px;
     border-radius: 12px;
-    height: 100%;
-    min-height: 0;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, 1fr));
-    align-content: stretch;
+    grid-template-rows: none;
   }
 
   .card {
-    min-height: 0;
-    height: 100%;
-    aspect-ratio: auto;
+    min-height: 74px;
+    aspect-ratio: 1 / 0.88;
   }
 
   .card-face {
