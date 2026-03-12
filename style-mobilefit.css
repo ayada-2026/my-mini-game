@@ -390,11 +390,13 @@ h1 {
     border-radius: 0;
     padding: 6px;
     display: grid;
-    grid-template-rows: auto auto auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
     gap: 4px;
   }
 
   .heading {
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 2px 8px;
@@ -420,6 +422,8 @@ h1 {
 
   .controls {
     margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 
   .best-record {
@@ -446,6 +450,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 4px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   .status-card {
@@ -459,16 +465,12 @@ h1 {
   }
 
   .message {
-    margin: 0;
-    min-height: 9px;
-    font-size: 0.52rem;
-    line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
 
   .board {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
     margin: 0;
     padding: 2px;
     gap: 2px;
