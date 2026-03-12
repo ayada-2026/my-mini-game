@@ -381,16 +381,17 @@ h1 {
 
 @media (max-width: 932px) and (orientation: landscape) {
   body {
-    padding: 6px;
+    padding: 0;
   }
 
   .game-shell {
     width: 100%;
-    min-height: calc(100dvh - 12px);
-    border-radius: 18px;
-    padding: 8px;
-    display: block;
-    gap: 6px;
+    height: 100dvh;
+    border-radius: 0;
+    padding: 6px;
+    display: grid;
+    grid-template-rows: auto auto auto minmax(0, 1fr);
+    gap: 4px;
   }
 
   .heading {
@@ -423,7 +424,7 @@ h1 {
 
   .best-record {
     border-radius: 10px;
-    padding: 5px 8px;
+    padding: 4px 7px;
   }
 
   .best-record-label,
@@ -449,7 +450,7 @@ h1 {
 
   .status-card {
     border-radius: 10px;
-    padding: 5px 6px;
+    padding: 4px 6px;
   }
 
   .status-value {
@@ -459,8 +460,8 @@ h1 {
 
   .message {
     margin: 0;
-    min-height: 10px;
-    font-size: 0.54rem;
+    min-height: 9px;
+    font-size: 0.52rem;
     line-height: 1.1;
     white-space: nowrap;
     overflow: hidden;
@@ -469,24 +470,28 @@ h1 {
 
   .board {
     margin: 0;
-    padding: 3px;
-    gap: 3px;
-    border-radius: 12px;
+    padding: 2px;
+    gap: 2px;
+    border-radius: 10px;
+    min-height: 0;
+    height: 100%;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-rows: none;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    align-content: stretch;
   }
 
   .card {
-    min-height: 74px;
-    aspect-ratio: 1 / 0.88;
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: auto;
   }
 
   .card-face {
-    border-radius: 7px;
+    border-radius: 6px;
   }
 
   .card-mark {
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     line-height: 1;
   }
 }
