@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>카드 짝 맞추기 게임</title>
+  <link rel="stylesheet" href="style-mobilefit.css?v=2">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="heading">
+      <div>
+        <h1>카드 짝 맞추기</h1>
+        <p class="subtitle">같은 이미지 카드 2장을 찾아 5x4 보드를 모두 완성해 보세요.</p>
+      </div>
+      <button type="button" class="reset-button" id="resetButton">리셋</button>
+    </section>
+
+    <section class="controls" aria-label="게임 정보">
+      <article class="best-record" aria-live="polite">
+        <span class="best-record-label">최고기록</span>
+        <strong class="best-record-value" id="bestRecordText">아직 기록이 없습니다.</strong>
+      </article>
+    </section>
+
+    <section class="status-bar" aria-label="현재 상태">
+      <article class="status-card">
+        <span class="status-label">턴 수</span>
+        <strong class="status-value" id="turnCount">0</strong>
+      </article>
+      <article class="status-card">
+        <span class="status-label">클리어 시간</span>
+        <strong class="status-value" id="timeCount">00:00</strong>
+      </article>
+      <article class="status-card">
+        <span class="status-label">맞춘 카드</span>
+        <strong class="status-value" id="matchedCount">0 / 10</strong>
+      </article>
+    </section>
+
+    <p class="message" id="message" aria-live="polite">카드를 눌러 게임을 시작하세요.</p>
+
+    <section class="board" id="gameBoard" aria-label="카드 보드"></section>
+  </main>
+
+  <script src="script-mobilefit.js?v=2"></script>
+</body>
+</html>
