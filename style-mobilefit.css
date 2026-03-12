@@ -265,8 +265,6 @@ h1 {
   body {
     padding: 0;
     display: block;
-    outline: 4px solid #00c853;
-    outline-offset: -4px;
   }
 
   .game-shell {
@@ -378,6 +376,130 @@ h1 {
 
   .card-back-text {
     display: none;
+  }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+  body {
+    padding: 6px;
+  }
+
+  .game-shell {
+    width: 100%;
+    height: calc(100dvh - 12px);
+    border-radius: 18px;
+    padding: 8px 10px;
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 8px 10px;
+    align-items: stretch;
+  }
+
+  .heading {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 10px;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.02rem;
+    line-height: 1.05;
+  }
+
+  .subtitle {
+    margin: 0;
+    font-size: 0.62rem;
+    line-height: 1.15;
+  }
+
+  .reset-button {
+    min-height: 28px;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+
+  .controls {
+    margin: 0;
+  }
+
+  .best-record {
+    height: 100%;
+    border-radius: 10px;
+    padding: 6px 8px;
+  }
+
+  .best-record-label,
+  .status-label {
+    font-size: 0.5rem;
+    margin-bottom: 2px;
+  }
+
+  .best-record-value {
+    font-size: 0.64rem;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .status-bar {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .status-card {
+    border-radius: 10px;
+    padding: 6px 7px;
+  }
+
+  .status-value {
+    font-size: 0.78rem;
+    line-height: 1;
+  }
+
+  .message {
+    grid-column: 1 / 2;
+    margin: 0;
+    min-height: 12px;
+    font-size: 0.58rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .board {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    margin: 0;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 12px;
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    align-content: stretch;
+  }
+
+  .card {
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .card-face {
+    border-radius: 8px;
+  }
+
+  .card-mark {
+    font-size: 0.82rem;
+    line-height: 1;
   }
 }
 
