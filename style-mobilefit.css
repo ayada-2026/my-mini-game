@@ -212,7 +212,7 @@ h1 {
   transform: rotateY(180deg);
   background: var(--card-front);
   border: 2px solid var(--line);
-  padding: 4px;
+  padding: 6px;
 }
 
 .card-image {
@@ -370,6 +370,10 @@ h1 {
 
   .card-face {
     border-radius: 6px;
+  }
+
+  .card-front {
+    padding: 5px;
   }
 
   .card-mark {
