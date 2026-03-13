@@ -63,10 +63,10 @@ function createCardImage(item) {
         </linearGradient>
       </defs>
       <rect width="180" height="180" rx="28" fill="url(#bg)" />
-      <circle cx="90" cy="68" r="48" fill="rgba(255,255,255,0.28)" />
-      <text x="90" y="92" text-anchor="middle" font-size="58">${item.emoji}</text>
-      <rect x="44" y="130" width="92" height="24" rx="12" fill="rgba(255,255,255,0.84)" />
-      <text x="90" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#503221">${item.label}</text>
+      <circle cx="90" cy="66" r="54" fill="rgba(255,255,255,0.28)" />
+      <text x="90" y="94" text-anchor="middle" font-size="66">${item.emoji}</text>
+      <rect x="40" y="132" width="100" height="26" rx="13" fill="rgba(255,255,255,0.84)" />
+      <text x="90" y="150" text-anchor="middle" font-size="17" font-weight="700" fill="#503221">${item.label}</text>
     </svg>
   `;
 

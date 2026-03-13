@@ -212,7 +212,7 @@ h1 {
   transform: rotateY(180deg);
   background: var(--card-front);
   border: 2px solid var(--line);
-  padding: 6px;
+  padding: 3px;
 }
 
 .card-image {
@@ -373,7 +373,7 @@ h1 {
   }
 
   .card-front {
-    padding: 5px;
+    padding: 2px;
   }
 
   .card-mark {
