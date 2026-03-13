@@ -55,18 +55,18 @@ function formatTime(seconds) {
 
 function createCardImage(item) {
   const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140">
       <defs>
         <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="${item.start}" />
           <stop offset="100%" stop-color="${item.end}" />
         </linearGradient>
       </defs>
-      <rect width="180" height="180" rx="28" fill="url(#bg)" />
-      <circle cx="90" cy="70" r="42" fill="rgba(255,255,255,0.32)" />
-      <text x="90" y="92" text-anchor="middle" font-size="54">${item.emoji}</text>
-      <rect x="28" y="126" width="124" height="28" rx="14" fill="rgba(255,255,255,0.78)" />
-      <text x="90" y="145" text-anchor="middle" font-size="18" font-weight="700" fill="#503221">${item.label}</text>
+      <rect width="240" height="140" rx="24" fill="url(#bg)" />
+      <circle cx="120" cy="58" r="36" fill="rgba(255,255,255,0.24)" />
+      <text x="120" y="78" text-anchor="middle" font-size="42">${item.emoji}</text>
+      <rect x="86" y="102" width="68" height="22" rx="11" fill="rgba(255,255,255,0.82)" />
+      <text x="120" y="117" text-anchor="middle" font-size="14" font-weight="700" fill="#503221">${item.label}</text>
     </svg>
   `;
 
