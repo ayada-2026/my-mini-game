@@ -516,6 +516,11 @@ h1 {
   .card-front {
     padding: 0;
   }
+
+  .card-image {
+    object-fit: cover;
+    object-position: center 18%;
+  }
 }
 
 @media (max-width: 420px) {
