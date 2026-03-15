@@ -4,16 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>카드 짝 맞추기 게임</title>
-  <link rel="stylesheet" href="style-mobilefit.css?v=2">
+  <link rel="stylesheet" href="style-mobilefit.css?v=3">
 </head>
 <body>
   <main class="game-shell">
     <section class="heading">
       <div>
         <h1>카드 짝 맞추기</h1>
-        <p class="subtitle">같은 이미지 카드 2장을 찾아 5x4 보드를 모두 완성해 보세요.</p>
+        <p class="subtitle">테마를 고르고 같은 카드 2장을 찾아 5x4 보드를 모두 완성해 보세요.</p>
       </div>
-      <button type="button" class="reset-button" id="resetButton">리셋</button>
+      <div class="header-actions">
+        <label class="theme-switch" for="themeSelect">
+          <span class="theme-switch-label">테마</span>
+          <select id="themeSelect" class="theme-select" aria-label="테마 선택">
+            <option value="default">기본</option>
+            <option value="flowers">꽃</option>
+          </select>
+        </label>
+        <button type="button" class="reset-button" id="resetButton">리셋</button>
+      </div>
     </section>
 
     <section class="controls" aria-label="게임 정보">
@@ -43,6 +52,6 @@
     <section class="board" id="gameBoard" aria-label="카드 보드"></section>
   </main>
 
-  <script src="script-mobilefit.js?v=2"></script>
+  <script src="script-mobilefit.js?v=3"></script>
 </body>
 </html>
