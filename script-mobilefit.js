@@ -1,14 +1,14 @@
-﻿const cardItems = [
-  { key: "sun", label: "태양", emoji: "☀️", start: "#ffe082", end: "#ffb300" },
-  { key: "moon", label: "달", emoji: "🌙", start: "#c5cae9", end: "#7986cb" },
-  { key: "cloud", label: "구름", emoji: "☁️", start: "#d7f0ff", end: "#90caf9" },
-  { key: "flower", label: "꽃", emoji: "🌸", start: "#ffd6e7", end: "#f48fb1" },
-  { key: "leaf", label: "잎", emoji: "🍀", start: "#dcedc8", end: "#81c784" },
-  { key: "fish", label: "물고기", emoji: "🐟", start: "#c8e6ff", end: "#4fc3f7" },
-  { key: "rocket", label: "로켓", emoji: "🚀", start: "#e1bee7", end: "#ba68c8" },
-  { key: "car", label: "자동차", emoji: "🚗", start: "#ffe0b2", end: "#ff8a65" },
-  { key: "cake", label: "케이크", emoji: "🎂", start: "#f8bbd0", end: "#f06292" },
-  { key: "gift", label: "선물", emoji: "🎁", start: "#ffecb3", end: "#ffca28" }
+const cardItems = [
+  { key: "flower1", label: "꽃 1", image: "images/flower1.png" },
+  { key: "flower2", label: "꽃 2", image: "images/flower2.png" },
+  { key: "flower3", label: "꽃 3", image: "images/flower3.png" },
+  { key: "flower4", label: "꽃 4", image: "images/flower4.png" },
+  { key: "flower5", label: "꽃 5", image: "images/flower5.png" },
+  { key: "flower6", label: "꽃 6", image: "images/flower6.png" },
+  { key: "flower7", label: "꽃 7", image: "images/flower7.png" },
+  { key: "flower8", label: "꽃 8", image: "images/flower8.png" },
+  { key: "flower9", label: "꽃 9", image: "images/flower9.png" },
+  { key: "flower10", label: "꽃 10", image: "images/flower10.png" }
 ];
 
 const TOTAL_PAIRS = 10;
@@ -51,26 +51,6 @@ function formatTime(seconds) {
   const minutes = String(Math.floor(seconds / 60)).padStart(2, "0");
   const remainSeconds = String(seconds % 60).padStart(2, "0");
   return `${minutes}:${remainSeconds}`;
-}
-
-function createCardImage(item) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-      <defs>
-        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="${item.start}" />
-          <stop offset="100%" stop-color="${item.end}" />
-        </linearGradient>
-      </defs>
-      <rect width="180" height="180" rx="28" fill="url(#bg)" />
-      <circle cx="90" cy="66" r="54" fill="rgba(255,255,255,0.28)" />
-      <text x="90" y="94" text-anchor="middle" font-size="66">${item.emoji}</text>
-      <rect x="40" y="132" width="100" height="26" rx="13" fill="rgba(255,255,255,0.84)" />
-      <text x="90" y="150" text-anchor="middle" font-size="17" font-weight="700" fill="#503221">${item.label}</text>
-    </svg>
-  `;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
 function loadBestRecord() {
@@ -126,7 +106,7 @@ function setupGame() {
     id: index,
     pairKey: item.key,
     label: item.label,
-    image: createCardImage(item),
+    image: item.image,
     matched: false
   }));
 

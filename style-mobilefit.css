@@ -212,13 +212,13 @@ h1 {
   transform: rotateY(180deg);
   background: var(--card-front);
   border: 2px solid var(--line);
-  padding: 3px;
+  padding: 0;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   display: block;
 }
@@ -373,7 +373,7 @@ h1 {
   }
 
   .card-front {
-    padding: 2px;
+    padding: 0;
   }
 
   .card-mark {
@@ -578,5 +578,15 @@ h1 {
 
   .card-mark {
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .card-front {
+    padding: 0;
+  }
+
+  .card-image {
+    transform: none;
   }
 }
